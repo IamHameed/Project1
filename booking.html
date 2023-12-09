@@ -3,58 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Booking site</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="samsung.css" media="(min-width:375px) and (max-width:767px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/phone.css" media="(max-width:760px)">
     <style>
-        .sec1{
-            background-image: url(/images/losangels.jpg);
-            max-width: 100%;
-            height: 600px;
-            background-position: center;
-        }
-        .sec1 ul{
-            display: flex;
-            list-style-type: none;
-            background-color: azure;
-            width: 100%;
-        }
-        .sec1 ul img{
-            height: 30px;
-            width: 40px;
-        }
-        .sec1 :nth-child(2){
-            margin-left:auto ;
-        }
-        .sec1 ul li{
-            padding: 20px;
-        }
-        .sec1 ul li a{
-            text-decoration: none;
-        }
-        .sec1 ul li a:hover{
+        .nav{
             background-color: black;
+            color: azure;
+        }
+        .nav ul{
+            width: 100%;
+            display: flex;
+            list-style: none;
+        }
+        .nav ul img{
+            width: 40px;
+            height: 40px;   
+        }
+        .nav ul li{
+            padding: 0 10px;
+            padding-top: 10px;
+        }
+        .nav ul li:nth-child(2){
+            margin-left: auto;
+        }
+        .nav ul li:hover{
+            color: blue;
+            cursor:grab;
+        }
+        .cont1{
+            width: 100%;
+            height: 600px;
+            background-image: url(/images/losangels.jpg);
+            background-position: center;
             color: aliceblue;
         }
+        .cont1 p, .cont1 h1{
+            text-align: center;
+        }
+        .cont1 h1{
+            padding-top: 500px;
+        }
+        .cont2{
+            width: 80%;
+            margin: auto;
+        }
+        .cont2 {
+            text-align: center;
+        }
+        .bandimage1{
+            width: 250px;
+            height: 300px;
+        }
+        .bandimage2{
+            width: 250px;
+            height: 300px;
+        }
+        .bandimage3{
+            width: 250px;
+            height: 300px;
+        }
+        .bandimages{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+        }
+        .bandimage1 img{
+            width: 100%;
+            height:250px;
+            object-fit: cover;
+        }
+        .bandimage2 img{
+            width: 100%;
+            height:250px;
+            object-fit: cover;
+        }
+        .bandimage3 img{
+            width: 100%;
+            height:250px;
+            object-fit: cover;
+        }
+        .cont2 p{
+            padding-top: 30px;
+            line-height: 30px;
+            font-style: italic;
+        }
+        .cont2 h5{
+            padding-top: 30px;
+        }
+        .cont2 h2{
+            font-style: initial;
+        }
+        .cont3{
+            width: 100%;
+            height: 800px;
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+        }
+        .cont3 h2{
+            text-align: center;
+            padding: 20px;
+        }
+        .cont3 h5{
+            text-align: center;
+            font-style: italic;
+            padding-bottom: 40px;
+        }
+        .month{
+            background-color: aliceblue;
+            color: black;
+            width: 60%;
+            margin: 0 auto;
+        }
+        .month1 h3::after{
+            content: "SOLD";
+            color: aliceblue;
+            background-color: red;
+            border-radius: 5px;
+            padding: 1px;
+            margin-left: 30%;
+        }
+        .month2 h3::after{
+            content: "SOLD";
+            color: aliceblue;
+            background-color: red;
+            border-radius: 5px;
+            padding: 1px;
+            margin-left: 30%;
+        }
+        .month3 h3::after{
+            content: "10";
+            background-color: black;
+            color: aliceblue;
+            border-radius: 50px 50px;
+            padding: 1px;
+            margin-left: 60%;
+        }
+        .sanfran,.paris,.newyork{
+            width: 300px;
+        }
+        .add{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .sanfran img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .paris img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .newyork img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .sanfran{
+            margin-right: 10px;
+        }
+        .newyork{
+            margin-left: 10px;
+        }
+        .sanfran h6,.sanfran p{
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .newyork h6,.newyork p{
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .paris h6,.paris p{
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .paris button,.sanfran button,.newyork button{
+            margin-left: 20px;
+        }
+        .cont4{
+            width: 100%;
+            height: 400px;
+        }
+        .cont4 {
+            display: flex;
+            flex-direction: column;    
+        }
+        .mail i::after{
+            content: "Email-id: holidaypvtltd";
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 20px;
+        }
+        .location i::after{
+            content: "Location: Chennai";
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 22px;
+        }
+        .phone i::after{
+            content: "Phone; 8778789989";
+            padding-left: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .contact{
+            width: 50%;
+            height: 300px;
+            
+        }
+        .form{
+            width: 30%;
+            height: 100px;
+           
+        }
+        .maincontect{
+            display: flex;
+        }
+        .form{
+            margin-left: 0px;
+            margin-top: 80px;
+        }
+        .form button{
+            margin-top: 20px;
+        }
+        .contact{
+          text-align: center;
+          padding-top: 80px;
+          padding-left: 200px;
+        }
+        .cont4 h2{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cont5{
+            width: 100%;
+            height: 800px;
+        }
+        .cont5 img{
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+        }
+        .cont6{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .cont6 a{
+            padding: 20px;
+        }        
     </style>
 </head>
 <body>
-    <div class="sec1">
-        <div class="navbar">
-            <ul>
-                <li><img src="/images/losangels.jpg" alt=""></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#"> Tour Plans</a></li>
-                <li><a href="#">Contant</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </div>
-
-
+    <div class="nav">
+        <ul>
+            <li><img src="/images/losangels.jpg" alt=""></li>
+            <li>Menu</li>
+            <li>Plans</li>
+            <li>Contact</li>
+            <li>More</li>
+            <li><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></li>
+        </ul>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div class="cont1">
+        <h1>Holiday Pv ltd..</h1>
+        <p>Best at our business</p>
+    </div>
+    <div class="cont2">
+        <h2>THE BAND</h2>
+        <h5>We love music</h5>
+        <p>Introducing our vibrant music band—a harmonious fusion of diverse talents and creative energies. From soulful melodies to electrifying beats, we traverse musical landscapes with passion and precision. Our band thrives on collaboration, bringing together individual strengths to craft an unforgettable sonic experience. Join us on this musical journey where every note resonates with the heartbeat of our collective artistry.</p>
+        <div class="bandimages">
+            <div class="bandimage1">
+                <h4>Band</h4>
+                <img src="/images/firstu.jpg" alt="">
+            </div>
+            <div class="bandimage2">
+                <h4>Party</h4>
+                <img src="/images/second.jpg" alt="">
+            </div>
+            <div class="bandimage3">
+                <h4>Club Dance</h4>
+                <img src="/images/third.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cont3">
+        <h2>Tour dates</h2>
+        <h5>Remeber to book your tickets</h5>
+        <div class="month">
+            <div class="month1"><h3>September</h3></div><hr>
+            <div class="month2"><h3>October</h3></div><hr>
+            <div class="month3"><h3>November</h3></div>
+        </div>
+        <div class="add">
+            <div class="sanfran">
+                <img src="/images/sanfran.jpg" alt="">
+                <h6>SANFRAN</h6>
+                <h6>12/01/2024 SUN</h6>
+                <p> Golden Gate Bridge, tech hub, Victorian charm.</p>
+                <button>Buy Tickets</button>
+            </div>
+            <div class="paris">
+                <img src="/images/paris.jpg" alt="">
+                <h6>PARIS</h6>
+                <h6>12/02/2024 SUN</h6>
+                <p>Eiffel Tower, Louvre, romantic ambiance, culinary delights.</p>
+                <button>Buy Tickets</button>
+            </div>
+            <div class="newyork">
+                <img src="/images/newyork.jpg" alt="">
+                <h6>NEWYORK</h6>
+                <h6>12/03/2024 SUN</h6>
+                <p> Iconic skyline, Broadway, Central Park, diverse culture.</p>   
+                <button>Buy Tickets</button> 
+            </div>
+        </div>    
+    </div>
+    <div class="cont4">
+        <h2>Contact</h2>
+        <div class="maincontect">
+            <div class="contact">
+                <div class="mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+            </div>
+            <div class="form row">
+                <input class="col-6" type="text" placeholder="name">
+                <input class="col" type="text" placeholder="Email">
+                <input class="col-12" type="text" placeholder="Message">
+                <button class="col-3">submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="cont5">
+        <img src="images/map.jpg" alt="">
+    </div>
+    <div class="cont6">
+      <div class="facebook">
+        <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+      </div>
+      <div class="insta">
+        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+      </div>
+      <div class="whatsapp">
+        <a href="#"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+      </div>
+      <div class="twitter">
+        <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-    
+</html>
